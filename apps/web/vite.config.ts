@@ -11,7 +11,11 @@ export default defineConfig({
   },
   plugins: [
     devtools(),
-    tanstackStart(),
+    tanstackStart({
+      prerender: {
+        enabled: true,
+      },
+    }),
     // https://tanstack.com/start/latest/docs/framework/react/guide/hosting
     nitro(),
     viteReact({
